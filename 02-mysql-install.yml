@@ -1,10 +1,10 @@
 - name: Install MYSQL server
   hosts: web
-  become: true
   tasks: ## Collection or Modules 
   - name: Install MYSQL RPM
     ansible.builtin.package:
-      name: httpd
+      name: mysql
       state: present
+      name: mysql
       state: enable
     
