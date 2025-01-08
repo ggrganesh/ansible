@@ -1,5 +1,8 @@
-- name: PING 
+- name: Install MYSQL server
   hosts: web
   tasks: ## Collection or Modules 
-  - name: Ping the server 
-    ansible.builtin.ping:
+  - name: Install MYSQL
+  ansible.builtin.package:
+    name: mysql
+    state: present
+    
