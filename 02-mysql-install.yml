@@ -5,6 +5,5 @@
     ansible.builtin.package:
       name: mysql
       state: present
-      name: mysql
-      state: enable
+
     
