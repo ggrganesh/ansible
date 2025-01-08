@@ -1,8 +1,8 @@
-- name: Install MYSQL server
+- name: Install HTTP server
   hosts: web
   tasks: ## Collection or Modules 
-  - name: Install MYSQL
+  - name: Install HTTPD
     ansible.builtin.package:
-      name: mysql
+      name: httpd
       state: present
     
