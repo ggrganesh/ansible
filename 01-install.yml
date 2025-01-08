@@ -2,7 +2,7 @@
   hosts: web
   tasks: ## Collection or Modules 
   - name: Install MYSQL
-  ansible.builtin.package:
-    name: mysql
-    state: present
+    ansible.builtin.package:
+      name: mysql
+      state: present
     
