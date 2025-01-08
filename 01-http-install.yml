@@ -1,0 +1,9 @@
+- name: Install HTTP server
+  hosts: web
+  become: true
+  tasks: ## Collection or Modules 
+  - name: Install HTTPD
+    ansible.builtin.package:
+      name: httpd
+      state: present
+    
