@@ -1,7 +1,0 @@
-- name: Pinging server  
-  hosts: db
-  tasks: ## Collection or Modules # Gathering facts 
-   - name: Gathering localhost Facts
-     ansible.builtin.debug: 
-       msg: {{ansible_facts}}
-    
