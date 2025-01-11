@@ -3,5 +3,5 @@
   connection: local
   tasks: ## Collection or Modules # Gathering facts 
   -name: Gathering localhost Facts
-   ansible.builtin.gather_facts: 
+   ansible.builtin.debug: 
    msg: {{ansible_facts}}
