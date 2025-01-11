@@ -1,5 +1,5 @@
 - name: PING 
-  hosts: db:local
+  hosts: local
   connection: local
   tasks: ## Collection or Modules 
   - name: Ping the server 
