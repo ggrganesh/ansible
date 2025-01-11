@@ -2,4 +2,4 @@
   hosts: db
   tasks:
   ansible.builtin.debug:
-   msg: "{{Hello World}}"
+   msg: "Hello World"
