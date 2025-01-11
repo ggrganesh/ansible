@@ -1,11 +1,7 @@
 - name: PING 
   hosts: local
   connection: local
-  var: ansible_facts
-  tasks: ## Collection or Modules 
-  - name: Ping the server 
-    ansible.builtin.ping:
-  - name: Print all available facts
+  tasks: ## Collection or Modules # Gathering facts 
   -name: Gathering localhost Facts
    ansible.builtin.gather_facts: 
    msg: {{ansible_facts}}
