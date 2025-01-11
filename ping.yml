@@ -1,5 +1,6 @@
 - name: PING 
-  hosts: db
+  hosts: db:local
+  connection: local
   tasks: ## Collection or Modules 
   - name: Ping the server 
     ansible.builtin.ping:
