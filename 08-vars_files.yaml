@@ -1,0 +1,11 @@
+- name: This is checking files Variables
+  hosts: local
+  connection: local
+  vars_files: 
+   course.yaml
+  tasks: 
+  - name: print couse information
+    ansible.builtin.debug:
+     msg: "course is {{ course }}, Duration is {{ duration }}, and tainer is {{ trainer }}"
+
+  

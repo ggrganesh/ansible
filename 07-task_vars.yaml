@@ -1,0 +1,13 @@
+- name: Variables checking 
+  hosts: local:db
+  connection: local
+  vars: 
+    course: "Devops with AWS"
+    duration: 20HRS
+    trainer: "Shiva Kumar"
+  tasks: 
+    - name: print Variables about devops course 
+      vars:
+       course: Ansible
+      ansible.builtin.debug: 
+         msg: "course is {{ course }}, Duration is {{ duration }}, and tainer is {{ trainer }}"
