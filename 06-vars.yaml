@@ -1,5 +1,5 @@
 - name: Variables checking 
-  hosts: local
+  hosts: local:db
   connection: local
   vars: 
     course: "Devops with AWS"
