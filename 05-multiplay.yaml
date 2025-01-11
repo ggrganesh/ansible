@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   tasks:
-     - name: PLAY1 and TASK1
-       ansible.builtin.debug:
+    - name: PLAY1 and TASK1
+      ansible.builtin.debug:
          msg: "PLAY1 and TASK1"
 
 
