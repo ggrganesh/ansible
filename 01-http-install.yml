@@ -1,5 +1,5 @@
 - name: Install HTTP server
-  hosts: web
+  hosts: db
   become: true
   tasks: ## Collection or Modules 
   - name: Install HTTPD

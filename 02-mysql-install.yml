@@ -1,5 +1,5 @@
 - name: Install MYSQL server
-  hosts: web
+  hosts: db
   tasks: ## Collection or Modules 
   - name: Install MYSQL RPM
     ansible.builtin.package:
