@@ -2,14 +2,15 @@
   hosts: local
   connection: local
   vars_prompt: 
-   - name: course
+   - name: COURSE
      prompt: please enter course name
      private: false # it is not confidential information
-   - name: duration
+   - name: DURATION
      prompt: please enter course duration
      private: false # it is not confidential information
-   - name: trainer
+   - name: TRAINER
      prompt: please enter trainer name
   tasks: 
-   ansible.builtin.debug: 
-     msg: "course is {{ course }}, Duration is {{ duration }}, and tainer is {{ trainer }}"
+  - name: print the information
+    ansible.builtin.debug: 
+      msg: "course is {{ COURSE }}, Duration is {{ DURATION }}, and tainer is {{ TRAINER }}"
