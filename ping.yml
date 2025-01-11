@@ -4,3 +4,5 @@
   tasks: ## Collection or Modules 
   - name: Ping the server 
     ansible.builtin.ping:
+  -name: Gathering localhost Facts
+   ansible.builtin.gather_facts: 
