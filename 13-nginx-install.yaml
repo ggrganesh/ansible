@@ -14,4 +14,4 @@
 
    - name: print nmgix service
      ansible.builtin.debug:
-        msg: "{{ item }}"
+        msg: "{{  }}"
