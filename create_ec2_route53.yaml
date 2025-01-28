@@ -33,24 +33,7 @@
       ansible.builtin.debug:
         msg: "{{ ec2_info }}"
     
-    # - name: Print private ip addresses
-    #   ansible.builtin.debug:
-    #     msg: "{{ item.instances.[0].private_ip_address }}"
-    #   loop: "{{ ec2_info.results }}"
-
-    - name: Print each instance name with its private IP address
+    - name: Print private ip addresses
       ansible.builtin.debug:
-        msg: "Instance Name: {{ item.item }}, Private IP: {{ item.instances[0].private_ip_address }}"
+        msg: "{{ item.instances.[0].private_ip_address }}"
       loop: "{{ ec2_info.results }}"
-
-
-    - name: Write instance details to a file
-      ansible.builtin.lineinfile:
-        content: "Instance Name: {{ item.item }}, Private IP: {{ item.instances[0].private_ip_address }}\n"
-        dest: "/home/ec2-user/ansible/ec2_instances.log"
-        remote_src: no
-        force: yes
-        mode: 0644
-      loop: "{{ ec2_info.results }}"
-      append: true
- 
