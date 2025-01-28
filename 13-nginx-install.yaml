@@ -1,6 +1,7 @@
 - name: Configure nginx server
   hosts: all
   become: yes  # become root user 
+  serial: 5
   tasks:
    - name: Install nginx 
      ansible.builtin.package: 
@@ -11,4 +12,6 @@
           name: nginx
           state: started
 
-        
+   - name: print nmgix service
+     ansible.built.debug:
+        msg: "{{ intem }}"
