@@ -1,5 +1,5 @@
 - name: Configure nginx server
-  hosts: all
+  hosts: web
   become: yes  # become root user 
   serial: 5
   tasks:
