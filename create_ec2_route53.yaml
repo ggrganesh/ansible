@@ -2,14 +2,14 @@
   connection: local
   hosts: local
   vars: 
-   subnet_id: subnet-07f3507ee3b57dbc7
-   sg_id: sg-052223eb3cc8015e5
-   ami_id: ami-09c813fb71547fc4f
-   instance_type: t2.micro
-   instance: 
-    - mysql
-    - backend
-    - frontend
+    subnet_id: subnet-07f3507ee3b57dbc7
+    sg_id: sg-052223eb3cc8015e5
+    ami_id: ami-09c813fb71547fc4f
+    instance_type: t2.micro
+    instance: 
+     - mysql
+     - backend
+     - frontend
   tasks:
     - name: MYSQL libraries 
       ansible.builtin.pip:
