@@ -6,7 +6,7 @@
     sg_id: sg-052223eb3cc8015e5
     ami_id: ami-09c813fb71547fc4f
     instance_type: t2.micro
-    instance: 
+    instances: 
      - mysql
      - backend
      - frontend
