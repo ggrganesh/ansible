@@ -2,12 +2,12 @@
   hosts: nginx
   become: yes  # become root user 
   tasks:
-  - name: Install nginx 
-    ansible.builtin.package: 
+   - name: Install nginx 
+     ansible.builtin.package: 
       name: nginx
       state: present
-      
-    ansible.builtin.service:
+   - name: Restarting nginx service
+     ansible.builtin.service:
           name: nginx
           state: started
 
