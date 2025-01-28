@@ -12,10 +12,10 @@
     - frontend
   tasks:
     - name: MYSQL libraries 
-     ansible.builtin.pip:
-      name: "{{item}}"
-      executable: pip3.9
-     loop: 
+      ansible.builtin.pip:
+       name: "{{item}}"
+       executable: pip3.9
+      loop: 
        - boto3
        - botocore
     - name: create ec2 instance 
