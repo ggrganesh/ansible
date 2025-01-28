@@ -1,5 +1,5 @@
 - name: Configure nginx server
-  hosts: nginx
+  hosts: all
   become: yes  # become root user 
   tasks:
    - name: Install nginx 
