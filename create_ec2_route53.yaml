@@ -13,17 +13,20 @@
   tasks:
     - name: MYSQL libraries 
       ansible.builtin.pip:
-       name: "{{item}}"
-       executable: pip3.9
+        name: "{{item}}"
+        executable: pip3.9
       loop: 
        - boto3
        - botocore
 
     - name: create ec2 instance 
       amazon.aws.ec2_instance: 
-       name: "{{ item }}"
-       subnet_id: "{{ subnet_id }}"
-       security_group: "{{ sg_id }}"
-       image_id: "{{ ami_id }}"
-       instance_type: "{{ instance_type }}"
+        name: "{{ item }}"
+        subnet_id: "{{ subnet_id }}"
+        security_group: "{{ sg_id }}"
+        image_id: "{{ ami_id }}"
+        instance_type: "{{ instance_type }}"
       loop: "{{ instance }}"
+    - name: print ec2_info
+      ansible.builtin.debug:
+        msg: "{{ ec2_info }}"
