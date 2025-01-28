@@ -42,3 +42,15 @@
       ansible.builtin.debug:
         msg: "Instance Name: {{ item.item }}, Private IP: {{ item.instances[0].private_ip_address }}"
       loop: "{{ ec2_info.results }}"
+
+
+    - name: Write instance details to a file
+      ansible.builtin.copy:
+        content: "Instance Name: {{ item.item }}, Private IP: {{ item.instances[0].private_ip_address }}\n"
+        dest: "/tmp/ec2_instances.log"
+        remote_src: no
+        force: yes
+        mode: 0644
+      loop: "{{ ec2_info.results }}"
+      append: true
+ 
